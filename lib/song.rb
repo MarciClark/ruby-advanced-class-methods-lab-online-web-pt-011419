@@ -45,7 +45,6 @@ class Song
     song = self.new 
     song.name = info[1].chomp(".mp3")
     song.artist_name = info[0]
-    @@all << song
     song
   end
   
