@@ -40,7 +40,7 @@ class Song
     @@all.sort_by {|song_name| song_name.name}
   end
 
-  def self.new_from_file_name(filename)
+  def self.new_from_filename(filename)
     info = filename.split(" - ")
     song = self.new 
     song.name = info[1].chomp(".mp3")
@@ -48,7 +48,7 @@ class Song
     song
   end
   
-  def self.create_from_file_name
+  def self.create_from_filename
     info = filename.split(" - ")
     song = self.create 
     song.name = info[1].chomp(".mp3")
